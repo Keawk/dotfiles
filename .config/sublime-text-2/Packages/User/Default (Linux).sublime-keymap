@@ -12,6 +12,7 @@
 
 
     // Azerty mapping
+    /*
     {
         "keys": ["alt+&"],
         "command": "set_layout",
@@ -31,5 +32,32 @@
             "rows": [0.0, 1.0],
             "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
         }
-    }
+    }*/
+
+    // Bépo mapping
+    {
+        "keys": ["alt+\""],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1]]
+        }
+    },
+    {
+        "keys": ["alt+«"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+        }
+    },
+
+    // Fix copy/paste behavior for bépo (2190)
+    { "keys": ["shift+delete"], "command": "cut" },
+    { "keys": ["ctrl+insert"], "command": "copy" },
+    { "keys": ["shift+insert"], "command": "paste" }
 ]
